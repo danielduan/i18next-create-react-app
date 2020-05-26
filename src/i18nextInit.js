@@ -2,6 +2,10 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
+import en from './locales/en.json';
+import es from './locales/es.json';
+import zh from './locales/zh.json';
+
 const langDetectorOptions = {
   // order and from where user language should be detected
   order: ['cookie', 'localStorage', 'navigator'],
@@ -27,6 +31,17 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
+    resources: {
+      en: { // translation is the default namespace
+        translation: en
+      },
+      es: {
+        translation: es
+      },
+      zh: {
+        translation: zh
+      }
+    },
     fallbackLng: 'en',
     debug: true,
     whitelist: ['en', 'zh', 'es'], // available languages for browser dector to pick from
