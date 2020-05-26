@@ -5090,6 +5090,13 @@ i18next-browser-languagedetector@^4.2.0:
   dependencies:
     "@babel/runtime" "^7.5.5"
 
+i18next-http-backend@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/i18next-http-backend/-/i18next-http-backend-1.0.12.tgz#1ffd9436e1e7e0c69ba665012647adabc694f6a8"
+  integrity sha512-MCRbUxyDyqexILV2COhDVVn88e64pG1LJzzYTSgnBF8Rsbar0q+vhr2MbO+UbDM+MVyx1gS67J/eiBJPyJ5vpQ==
+  dependencies:
+    node-fetch "2.6.0"
+
 i18next@^19.4.5:
   version "19.4.5"
   resolved "https://registry.yarnpkg.com/i18next/-/i18next-19.4.5.tgz#f9ea8bbb48d1ec66bc3436f0bb74a16b11821e11"
@@ -6883,6 +6890,11 @@ no-case@^3.0.3:
   dependencies:
     lower-case "^2.0.1"
     tslib "^1.10.0"
+
+node-fetch@2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
+  integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
 
 node-forge@0.9.0:
   version "0.9.0"
