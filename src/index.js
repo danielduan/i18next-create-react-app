@@ -8,7 +8,9 @@ import './i18nextInit';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <React.Suspense fallback="loading">
+      <App />
+    </React.Suspense>
   </React.StrictMode>,
   document.getElementById('root')
 );
