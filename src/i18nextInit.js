@@ -2,9 +2,14 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
+import ICU from 'i18next-icu';
+
+import en from 'i18next-icu/locale-data/en';
+import es from 'i18next-icu/locale-data/es';
+import zh from 'i18next-icu/locale-data/zh';
 
 import bundles, { availableLocales } from './localeBundles';
-import en from './locales/en.json';
+import enBundle from './locales/en.json';
 
 const DEFAULT_LOCALE = 'en';
 
@@ -18,7 +23,7 @@ function loadLocaleBundle(locale) {
         console.error(err);
       });
   }
-  return Promise.resolve(en);
+  return Promise.resolve(enBundle);
 }
 
 const langDetectorOptions = {
@@ -70,6 +75,13 @@ i18n
   .use(LanguageDetector)
   // use HTTP backend to async load translated strings
   .use(HttpApi)
+  // use ICU standard for pluralization and message formats
+  .use(
+    new ICU({
+      // ICU also needs rules about pluralization and formatting
+      localeData: [en, es, zh],
+    })
+  )
   // pass the i18n instance to react-i18next.
   .use(initReactI18next)
   // init i18next
