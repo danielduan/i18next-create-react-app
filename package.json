@@ -21,7 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "extract": "npx i18next"
+    "extract": "npx i18next-parser",
+    "validate": "npx eslint src/locales/*.json"
   },
   "eslintConfig": {
     "extends": "react-app"
